@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PowerFactor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter real power (W): ");
+        double P = sc.nextDouble();
+
+        System.out.print("Enter apparent power (VA): ");
+        double S = sc.nextDouble();
+
+        double pf = P / S;
+
+        System.out.println("Power Factor = " + pf);
+
+        if (pf >= 0.9)
+            System.out.println("Excellent power factor");
+        else if (pf >= 0.8)
+            System.out.println("Good power factor");
+        else
+            System.out.println("Poor power factor");
+
+        sc.close();
+    }
+}
