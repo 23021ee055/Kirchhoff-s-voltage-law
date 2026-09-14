@@ -1,0 +1,8 @@
+print("TRANSISTOR CURRENT GAIN")
+
+Ic = float(input("Enter collector current (mA): "))
+Ib = float(input("Enter base current (mA): "))
+
+beta = Ic / Ib
+
+print("Current Gain Beta =", beta)
