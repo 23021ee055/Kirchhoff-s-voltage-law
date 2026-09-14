@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ResonantFrequency {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter inductance (H): ");
+        double L = sc.nextDouble();
+
+        System.out.print("Enter capacitance (F): ");
+        double C = sc.nextDouble();
+
+        double f = 1 /
+                (2 * Math.PI * Math.sqrt(L * C));
+
+        System.out.println("Resonant Frequency = "
+                + f + " Hz");
+
+        sc.close();
+    }
+}
