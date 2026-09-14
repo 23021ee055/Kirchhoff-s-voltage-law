@@ -1,0 +1,14 @@
+print("NORTON EQUIVALENT CALCULATOR")
+
+vth = float(input("Enter Thevenin voltage (V): "))
+rth = float(input("Enter Thevenin resistance (Ohm): "))
+
+if rth > 0:
+    norton_current = vth / rth
+
+    print("\nNorton Current:",
+          norton_current, "A")
+    print("Norton Resistance:",
+          rth, "Ohm")
+else:
+    print("Invalid resistance")
