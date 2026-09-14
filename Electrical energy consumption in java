@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class EnergyConsumption {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter appliance power (W): ");
+        double power = sc.nextDouble();
+
+        System.out.print("Enter operating time (hours): ");
+        double time = sc.nextDouble();
+
+        double energy = (power / 1000) * time;
+
+        System.out.printf("Energy Consumption = %.2f kWh\n", energy);
+        sc.close();
+    }
+}
