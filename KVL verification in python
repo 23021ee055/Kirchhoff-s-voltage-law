@@ -1,0 +1,17 @@
+print("KIRCHHOFF'S VOLTAGE LAW")
+
+supply = float(input("Enter supply voltage (V): "))
+v1 = float(input("Enter voltage drop V1 (V): "))
+v2 = float(input("Enter voltage drop V2 (V): "))
+
+total_drop = v1 + v2
+difference = supply - total_drop
+
+print("\nSupply Voltage:", supply, "V")
+print("Total Voltage Drop:", total_drop, "V")
+print("Difference:", difference, "V")
+
+if abs(difference) < 0.001:
+    print("KVL is VERIFIED")
+else:
+    print("KVL is NOT VERIFIED")
