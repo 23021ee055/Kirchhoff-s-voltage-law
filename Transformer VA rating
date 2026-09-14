@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class TransformerVARating {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("TRANSFORMER VA RATING");
+
+        System.out.print("Enter secondary voltage (V): ");
+        double V = sc.nextDouble();
+
+        System.out.print("Enter secondary current (A): ");
+        double I = sc.nextDouble();
+
+        double VA = V * I;
+
+        System.out.println("Transformer Rating = "
+                + VA + " VA");
+
+        System.out.println("Transformer Rating = "
+                + VA / 1000 + " kVA");
+
+        sc.close();
+    }
+}
