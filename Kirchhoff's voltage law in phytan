@@ -1,0 +1,10 @@
+print("KIRCHHOFF'S VOLTAGE LAW")
+
+Vs = float(input("Enter supply voltage (V): "))
+V1 = float(input("Enter V1 (V): "))
+V2 = float(input("Enter V2 (V): "))
+
+V3 = Vs - V1 - V2
+
+print("Unknown voltage V3 =", V3, "V")
+print("Total voltage drops =", V1 + V2 + V3, "V")
