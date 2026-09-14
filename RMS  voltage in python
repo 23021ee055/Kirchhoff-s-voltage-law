@@ -1,0 +1,9 @@
+import math
+
+print("RMS VOLTAGE CALCULATOR")
+
+Vpeak = float(input("Enter peak voltage (V): "))
+
+Vrms = Vpeak / math.sqrt(2)
+
+print("RMS Voltage =", Vrms, "V")
