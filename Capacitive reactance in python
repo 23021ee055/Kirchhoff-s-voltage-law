@@ -1,0 +1,9 @@
+import math
+
+f = float(input("Enter frequency (Hz): "))
+c = float(input("Enter capacitance (microfarad): "))
+
+c = c * 1e-6
+xc = 1 / (2 * math.pi * f * c)
+
+print(f"Capacitive Reactance = {xc:.2f} Ohm")
