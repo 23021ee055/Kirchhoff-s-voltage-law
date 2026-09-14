@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TransmissionLoss {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("TRANSMISSION LINE POWER LOSS");
+
+        System.out.print("Enter line current (A): ");
+        double I = sc.nextDouble();
+
+        System.out.print("Enter line resistance (Ohm): ");
+        double R = sc.nextDouble();
+
+        double loss = I * I * R;
+
+        System.out.println("Power Loss = " + loss + " W");
+        System.out.println("Power Loss = " + loss / 1000 + " kW");
+
+        sc.close();
+    }
+}
