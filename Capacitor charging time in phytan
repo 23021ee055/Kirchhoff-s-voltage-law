@@ -1,0 +1,11 @@
+print("CAPACITOR CHARGING TIME")
+
+R = float(input("Enter resistance (Ohm): "))
+C = float(input("Enter capacitance (F): "))
+
+tau = R * C
+charging_time = 5 * tau
+
+print("Time Constant =", tau, "seconds")
+print("Approximate Charging Time =",
+      charging_time, "seconds")
