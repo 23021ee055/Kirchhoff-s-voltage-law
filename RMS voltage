@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class RMSVoltage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter peak voltage (V): ");
+        double Vpeak = sc.nextDouble();
+
+        double Vrms = Vpeak / Math.sqrt(2);
+
+        System.out.println("RMS Voltage = "
+                + Vrms + " V");
+
+        sc.close();
+    }
+}
