@@ -1,0 +1,12 @@
+print("THEVENIN EQUIVALENT CALCULATOR")
+
+vth = float(input("Enter open circuit voltage (V): "))
+isc = float(input("Enter short circuit current (A): "))
+
+if isc > 0:
+    rth = vth / isc
+
+    print("\nThevenin Voltage:", vth, "V")
+    print("Thevenin Resistance:", rth, "Ohm")
+else:
+    print("Invalid short circuit current")
