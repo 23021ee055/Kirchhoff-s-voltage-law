@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class KCL {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("KIRCHHOFF'S CURRENT LAW");
+
+        System.out.print("Enter incoming current I1 (A): ");
+        double I1 = sc.nextDouble();
+
+        System.out.print("Enter incoming current I2 (A): ");
+        double I2 = sc.nextDouble();
+
+        System.out.print("Enter outgoing current I3 (A): ");
+        double I3 = sc.nextDouble();
+
+        double I4 = I1 + I2 - I3;
+
+        System.out.println("Unknown current I4 = " + I4 + " A");
+
+        sc.close();
+    }
+}
