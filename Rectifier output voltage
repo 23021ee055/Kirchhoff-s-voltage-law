@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class RectifierOutput {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("RECTIFIER OUTPUT CALCULATOR");
+
+        System.out.print("Enter RMS input voltage (V): ");
+        double Vrms = sc.nextDouble();
+
+        double Vpeak = Math.sqrt(2) * Vrms;
+        double halfWave = Vpeak / Math.PI;
+        double fullWave = (2 * Vpeak) / Math.PI;
+
+        System.out.println("Peak Voltage = " + Vpeak + " V");
+        System.out.println("Half Wave DC Output = "
+                + halfWave + " V");
+        System.out.println("Full Wave DC Output = "
+                + fullWave + " V");
+
+        sc.close();
+    }
+}
