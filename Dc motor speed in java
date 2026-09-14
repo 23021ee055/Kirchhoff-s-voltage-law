@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class DCMotorSpeed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter back EMF (V): ");
+        double e = sc.nextDouble();
+
+        System.out.print("Enter number of poles: ");
+        double poles = sc.nextDouble();
+
+        System.out.print("Enter flux per pole (Wb): ");
+        double flux = sc.nextDouble();
+
+        double speed = (60 * e) / (poles * flux);
+
+        System.out.printf("Motor Speed = %.2f RPM\n", speed);
+        sc.close();
+    }
+}
