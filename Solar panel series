@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SolarPanelSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("SOLAR PANEL SERIES CALCULATOR");
+
+        System.out.print("Enter voltage of one panel (V): ");
+        double panelVoltage = sc.nextDouble();
+
+        System.out.print("Enter required system voltage (V): ");
+        double requiredVoltage = sc.nextDouble();
+
+        int panels = (int) Math.ceil(
+                requiredVoltage / panelVoltage);
+
+        double actualVoltage = panels * panelVoltage;
+
+        System.out.println("\nPanels Required = " + panels);
+        System.out.println("Actual Voltage = "
+                + actualVoltage + " V");
+
+        sc.close();
+    }
+}
