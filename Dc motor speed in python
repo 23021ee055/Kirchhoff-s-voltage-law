@@ -1,0 +1,7 @@
+e = float(input("Enter back EMF (V): "))
+poles = float(input("Enter number of poles: "))
+flux = float(input("Enter flux per pole (Wb): "))
+
+speed = (60 * e) / (poles * flux)
+
+print(f"Motor Speed = {speed:.2f} RPM")
