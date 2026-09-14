@@ -1,0 +1,8 @@
+print("INDUCTOR TIME CONSTANT")
+
+R = float(input("Enter resistance (Ohm): "))
+L = float(input("Enter inductance (H): "))
+
+tau = L / R
+
+print("RL Time Constant =", tau, "seconds")
