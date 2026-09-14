@@ -1,0 +1,6 @@
+power = float(input("Enter appliance power (W): "))
+time = float(input("Enter operating time (hours): "))
+
+energy = (power / 1000) * time
+
+print(f"Energy Consumption = {energy:.2f} kWh")
