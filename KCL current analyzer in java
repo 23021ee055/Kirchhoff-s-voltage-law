@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class KCLCurrentAnalyzer {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("======================================");
+        System.out.println("       KCL CURRENT ANALYZER");
+        System.out.println("======================================");
+
+        System.out.print("Enter number of incoming currents: ");
+        int n = sc.nextInt();
+
+        double incomingTotal = 0;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Enter incoming current I" + i + " (A): ");
+            double current = sc.nextDouble();
+
+            incomingTotal += current;
+        }
+
+        System.out.print("Enter number of outgoing currents: ");
+        int m = sc.nextInt();
+
+        double outgoingTotal = 0;
+
+        for (int i = 1; i <= m; i++) {
+            System.out.print("Enter outgoing current I" + i + " (A): ");
+            double current = sc.nextDouble();
+
+            outgoingTotal += current;
+        }
+
+        double difference = incomingTotal - outgoingTotal;
+
+        System.out.println("\n------------ RESULT ------------");
+
+        System.out.println("Total Incoming Current = "
+                + incomingTotal + " A");
+
+        System.out.println("Total Outgoing Current = "
+                + outgoingTotal + " A");
+
+        System.out.println("Current Difference = "
+                + difference + " A");
+
+        if (Math.abs(difference) < 0.001) {
+            System.out.println("\nKCL STATUS: VERIFIED");
+            System.out.println(
+                "Total incoming current is equal to total outgoing current."
+            );
+        } else {
+            System.out.println("\nKCL STATUS: NOT VERIFIED");
+            System.out.println(
+                "Incoming and outgoing currents are not equal."
+            );
+        }
+
+        System.out.println("--------------------------------");
+        System.out.println("Program completed successfully.");
+
+        sc.close();
+    }
+}
