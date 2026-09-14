@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class InductorTimeConstant {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter resistance (Ohm): ");
+        double R = sc.nextDouble();
+
+        System.out.print("Enter inductance (H): ");
+        double L = sc.nextDouble();
+
+        double tau = L / R;
+
+        System.out.println("RL Time Constant = "
+                + tau + " seconds");
+
+        sc.close();
+    }
+}
