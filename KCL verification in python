@@ -1,0 +1,17 @@
+print("KIRCHHOFF'S CURRENT LAW")
+
+i1 = float(input("Enter incoming current I1 (A): "))
+i2 = float(input("Enter incoming current I2 (A): "))
+i3 = float(input("Enter outgoing current I3 (A): "))
+
+incoming = i1 + i2
+difference = incoming - i3
+
+print("\nIncoming Current:", incoming, "A")
+print("Outgoing Current:", i3, "A")
+print("Difference:", difference, "A")
+
+if abs(difference) < 0.001:
+    print("KCL is VERIFIED")
+else:
+    print("KCL is NOT VERIFIED")
