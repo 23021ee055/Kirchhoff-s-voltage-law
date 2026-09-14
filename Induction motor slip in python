@@ -1,0 +1,13 @@
+print("=== Induction Motor Slip Calculator ===")
+
+synchronous_speed = float(input("Enter synchronous speed (RPM): "))
+rotor_speed = float(input("Enter rotor speed (RPM): "))
+
+slip = (synchronous_speed - rotor_speed) / synchronous_speed
+slip_percentage = slip * 100
+
+print("\nInduction Motor Results")
+print("Synchronous Speed:", synchronous_speed, "RPM")
+print("Rotor Speed:", rotor_speed, "RPM")
+print("Slip:", round(slip, 4))
+print("Slip Percentage:", round(slip_percentage, 2), "%")
