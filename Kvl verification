@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class KVLVerification {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("KIRCHHOFF'S VOLTAGE LAW");
+
+        System.out.print("Enter supply voltage (V): ");
+        double supply = sc.nextDouble();
+
+        System.out.print("Enter voltage drop V1 (V): ");
+        double V1 = sc.nextDouble();
+
+        System.out.print("Enter voltage drop V2 (V): ");
+        double V2 = sc.nextDouble();
+
+        double totalDrop = V1 + V2;
+        double difference = supply - totalDrop;
+
+        System.out.println("\nSupply Voltage = " + supply + " V");
+        System.out.println("Total Voltage Drop = " + totalDrop + " V");
+        System.out.println("Difference = " + difference + " V");
+
+        if (Math.abs(difference) < 0.001)
+            System.out.println("KVL is VERIFIED.");
+        else
+            System.out.println("KVL is NOT VERIFIED.");
+
+        sc.close();
+    }
+}
