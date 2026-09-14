@@ -1,0 +1,15 @@
+print("POWER FACTOR CALCULATOR")
+
+P = float(input("Enter real power (W): "))
+S = float(input("Enter apparent power (VA): "))
+
+pf = P / S
+
+print("Power Factor =", pf)
+
+if pf >= 0.9:
+    print("Excellent Power Factor")
+elif pf >= 0.8:
+    print("Good Power Factor")
+else:
+    print("Poor Power Factor")
