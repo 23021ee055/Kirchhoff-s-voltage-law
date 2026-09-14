@@ -1,0 +1,11 @@
+print("TRANSMISSION LINE EFFICIENCY")
+
+sending_power = float(input("Enter sending-end power (kW): "))
+receiving_power = float(input("Enter receiving-end power (kW): "))
+
+loss = sending_power - receiving_power
+efficiency = (receiving_power / sending_power) * 100
+
+print("\nPower Loss:", loss, "kW")
+print("Transmission Efficiency:",
+      round(efficiency, 2), "%")
