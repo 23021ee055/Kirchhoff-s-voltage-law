@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MaximumPowerTransfer {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("MAXIMUM POWER TRANSFER THEOREM");
+
+        System.out.print("Enter Thevenin voltage (V): ");
+        double Vth = sc.nextDouble();
+
+        System.out.print("Enter Thevenin resistance (Ohm): ");
+        double Rth = sc.nextDouble();
+
+        double RL = Rth;
+        double current = Vth / (Rth + RL);
+        double power = current * current * RL;
+
+        System.out.println("\nOptimal Load Resistance = " + RL + " Ohm");
+        System.out.println("Load Current = " + current + " A");
+        System.out.println("Maximum Load Power = " + power + " W");
+
+        sc.close();
+    }
+}
