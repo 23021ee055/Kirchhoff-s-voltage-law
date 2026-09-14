@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class TheveninCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("THEVENIN EQUIVALENT CALCULATOR");
+
+        System.out.print("Enter open circuit voltage (V): ");
+        double Vth = sc.nextDouble();
+
+        System.out.print("Enter short circuit current (A): ");
+        double Isc = sc.nextDouble();
+
+        if (Isc <= 0) {
+            System.out.println("Invalid current.");
+        } else {
+            double Rth = Vth / Isc;
+
+            System.out.println("\nThevenin Voltage = " + Vth + " V");
+            System.out.println("Thevenin Resistance = " + Rth + " Ohm");
+        }
+
+        sc.close();
+    }
+}
