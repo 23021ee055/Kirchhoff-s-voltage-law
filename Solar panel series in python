@@ -1,0 +1,12 @@
+import math
+
+print("SOLAR PANEL SERIES CALCULATOR")
+
+panel_voltage = float(input("Enter voltage of one panel (V): "))
+required_voltage = float(input("Enter required voltage (V): "))
+
+panels = math.ceil(required_voltage / panel_voltage)
+actual_voltage = panels * panel_voltage
+
+print("\nNumber of Panels:", panels)
+print("Actual Voltage:", actual_voltage, "V")
