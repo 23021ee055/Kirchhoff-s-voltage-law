@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class NortonCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("NORTON EQUIVALENT CALCULATOR");
+
+        System.out.print("Enter Thevenin voltage (V): ");
+        double Vth = sc.nextDouble();
+
+        System.out.print("Enter Thevenin resistance (Ohm): ");
+        double Rth = sc.nextDouble();
+
+        if (Rth <= 0) {
+            System.out.println("Invalid resistance.");
+        } else {
+            double In = Vth / Rth;
+
+            System.out.println("Norton Current = " + In + " A");
+            System.out.println("Norton Resistance = " + Rth + " Ohm");
+        }
+
+        sc.close();
+    }
+}
