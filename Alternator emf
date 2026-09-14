@@ -1,0 +1,19 @@
+import math
+
+print("=== Alternator EMF Calculator ===")
+
+phases = int(input("Enter number of phases: "))
+flux = float(input("Enter flux per pole (Wb): "))
+turns = int(input("Enter turns per phase: "))
+frequency = float(input("Enter frequency (Hz): "))
+winding_factor = float(input("Enter winding factor: "))
+
+emf = 4.44 * winding_factor * flux * turns * frequency
+
+print("\nAlternator Parameters")
+print("Number of Phases:", phases)
+print("Flux per Pole:", flux, "Wb")
+print("Turns per Phase:", turns)
+print("Frequency:", frequency, "Hz")
+print("Winding Factor:", winding_factor)
+print("Generated EMF per Phase:", round(emf, 2), "V")
