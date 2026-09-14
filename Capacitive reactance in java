@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CapacitiveReactance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter frequency (Hz): ");
+        double f = sc.nextDouble();
+
+        System.out.print("Enter capacitance (microfarad): ");
+        double c = sc.nextDouble();
+
+        c = c * 1e-6;
+
+        double xc = 1 / (2 * Math.PI * f * c);
+
+        System.out.printf("Capacitive Reactance = %.2f Ohm\n", xc);
+        sc.close();
+    }
+}
