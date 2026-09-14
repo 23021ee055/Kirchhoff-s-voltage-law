@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ZenerResistor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter supply voltage (V): ");
+        double Vs = sc.nextDouble();
+
+        System.out.print("Enter Zener voltage (V): ");
+        double Vz = sc.nextDouble();
+
+        System.out.print("Enter Zener current (mA): ");
+        double IzmA = sc.nextDouble();
+
+        double Iz = IzmA / 1000;
+        double R = (Vs - Vz) / Iz;
+        double power = Iz * Vz;
+
+        System.out.println("Required Resistance = "
+                + R + " Ohm");
+
+        System.out.println("Zener Power = "
+                + power + " W");
+
+        sc.close();
+    }
+}
