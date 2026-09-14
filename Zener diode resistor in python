@@ -1,0 +1,13 @@
+print("ZENER DIODE RESISTOR CALCULATOR")
+
+Vs = float(input("Enter supply voltage (V): "))
+Vz = float(input("Enter Zener voltage (V): "))
+Iz_mA = float(input("Enter Zener current (mA): "))
+
+Iz = Iz_mA / 1000
+
+R = (Vs - Vz) / Iz
+power = Vz * Iz
+
+print("Required Resistor =", R, "Ohm")
+print("Zener Power =", power, "W")
