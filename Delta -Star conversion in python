@@ -1,0 +1,16 @@
+print("DELTA TO STAR CONVERSION")
+
+ra = float(input("Enter RA (Ohm): "))
+rb = float(input("Enter RB (Ohm): "))
+rc = float(input("Enter RC (Ohm): "))
+
+total = ra + rb + rc
+
+r1 = (ra * rb) / total
+r2 = (rb * rc) / total
+r3 = (rc * ra) / total
+
+print("\nStar Resistances:")
+print("R1 =", r1, "Ohm")
+print("R2 =", r2, "Ohm")
+print("R3 =", r3, "Ohm")
