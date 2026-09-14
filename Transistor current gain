@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class TransistorGain {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter collector current (mA): ");
+        double Ic = sc.nextDouble();
+
+        System.out.print("Enter base current (mA): ");
+        double Ib = sc.nextDouble();
+
+        double beta = Ic / Ib;
+
+        System.out.println("Current Gain (Beta) = "
+                + beta);
+
+        sc.close();
+    }
+}
