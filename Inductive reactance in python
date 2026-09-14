@@ -1,0 +1,9 @@
+import math
+
+f = float(input("Enter frequency (Hz): "))
+l = float(input("Enter inductance (mH): "))
+
+l = l / 1000
+xl = 2 * math.pi * f * l
+
+print(f"Inductive Reactance = {xl:.2f} Ohm")
