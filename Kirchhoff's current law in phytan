@@ -1,0 +1,9 @@
+print("KIRCHHOFF'S CURRENT LAW")
+
+I1 = float(input("Enter incoming current I1 (A): "))
+I2 = float(input("Enter incoming current I2 (A): "))
+I3 = float(input("Enter outgoing current I3 (A): "))
+
+I4 = I1 + I2 - I3
+
+print("Unknown current I4 =", I4, "A")
