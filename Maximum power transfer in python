@@ -1,0 +1,12 @@
+print("MAXIMUM POWER TRANSFER")
+
+vth = float(input("Enter Thevenin voltage (V): "))
+rth = float(input("Enter Thevenin resistance (Ohm): "))
+
+rl = rth
+current = vth / (rth + rl)
+power = current ** 2 * rl
+
+print("\nOptimal Load Resistance:", rl, "Ohm")
+print("Load Current:", current, "A")
+print("Maximum Power:", power, "W")
