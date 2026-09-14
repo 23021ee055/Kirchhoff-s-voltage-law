@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class InductiveReactance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter frequency (Hz): ");
+        double f = sc.nextDouble();
+
+        System.out.print("Enter inductance (mH): ");
+        double l = sc.nextDouble();
+
+        l = l / 1000;
+
+        double xl = 2 * Math.PI * f * l;
+
+        System.out.printf("Inductive Reactance = %.2f Ohm\n", xl);
+        sc.close();
+    }
+}
