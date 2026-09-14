@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class StarDelta {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("STAR TO DELTA CONVERSION");
+
+        System.out.print("Enter R1 (Ohm): ");
+        double R1 = sc.nextDouble();
+
+        System.out.print("Enter R2 (Ohm): ");
+        double R2 = sc.nextDouble();
+
+        System.out.print("Enter R3 (Ohm): ");
+        double R3 = sc.nextDouble();
+
+        double RA = (R1 * R2 + R2 * R3 + R3 * R1) / R3;
+        double RB = (R1 * R2 + R2 * R3 + R3 * R1) / R1;
+        double RC = (R1 * R2 + R2 * R3 + R3 * R1) / R2;
+
+        System.out.println("\nDelta Resistance:");
+        System.out.println("RA = " + RA + " Ohm");
+        System.out.println("RB = " + RB + " Ohm");
+        System.out.println("RC = " + RC + " Ohm");
+
+        sc.close();
+    }
+}
