@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class KCLVerification {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("KIRCHHOFF'S CURRENT LAW");
+        System.out.print("Enter incoming current I1 (A): ");
+        double I1 = sc.nextDouble();
+
+        System.out.print("Enter incoming current I2 (A): ");
+        double I2 = sc.nextDouble();
+
+        System.out.print("Enter outgoing current I3 (A): ");
+        double I3 = sc.nextDouble();
+
+        double totalIncoming = I1 + I2;
+        double difference = totalIncoming - I3;
+
+        System.out.println("\nIncoming Current = " + totalIncoming + " A");
+        System.out.println("Outgoing Current = " + I3 + " A");
+        System.out.println("Difference = " + difference + " A");
+
+        if (Math.abs(difference) < 0.001)
+            System.out.println("KCL is VERIFIED.");
+        else
+            System.out.println("KCL is NOT VERIFIED.");
+
+        sc.close();
+    }
+}
