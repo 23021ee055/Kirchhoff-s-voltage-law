@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class TransformerEfficiency {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter output power (W): ");
+        double output = sc.nextDouble();
+
+        System.out.print("Enter input power (W): ");
+        double input = sc.nextDouble();
+
+        double efficiency = (output / input) * 100;
+
+        System.out.printf("Transformer Efficiency = %.2f%%\n", efficiency);
+        sc.close();
+    }
+}
