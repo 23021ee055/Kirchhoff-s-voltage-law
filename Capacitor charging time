@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class CapacitorCharging {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("CAPACITOR CHARGING CALCULATOR");
+
+        System.out.print("Enter resistance R (Ohm): ");
+        double R = sc.nextDouble();
+
+        System.out.print("Enter capacitance C (F): ");
+        double C = sc.nextDouble();
+
+        double timeConstant = R * C;
+
+        System.out.println("Time Constant = "
+                + timeConstant + " seconds");
+
+        System.out.println("Approximate charging time = "
+                + (5 * timeConstant) + " seconds");
+
+        sc.close();
+    }
+}
