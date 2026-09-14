@@ -1,0 +1,11 @@
+import math
+
+print("RLC RESONANT FREQUENCY")
+
+L = float(input("Enter inductance (H): "))
+C = float(input("Enter capacitance (F): "))
+
+frequency = 1 / (2 * math.pi * math.sqrt(L * C))
+
+print("\nResonant Frequency:",
+      round(frequency, 3), "Hz")
