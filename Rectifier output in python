@@ -1,0 +1,14 @@
+import math
+
+print("RECTIFIER OUTPUT CALCULATOR")
+
+Vrms = float(input("Enter RMS input voltage (V): "))
+
+Vpeak = math.sqrt(2) * Vrms
+
+half_wave = Vpeak / math.pi
+full_wave = 2 * Vpeak / math.pi
+
+print("Peak Voltage =", Vpeak, "V")
+print("Half Wave Output =", half_wave, "V")
+print("Full Wave Output =", full_wave, "V")
