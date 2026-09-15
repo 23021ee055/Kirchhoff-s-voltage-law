@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class VoltageDivider {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("================================");
+        System.out.println("       VOLTAGE DIVIDER");
+        System.out.println("================================");
+
+        // Input values
+        System.out.print("Enter input voltage (V): ");
+        double Vin = sc.nextDouble();
+
+        System.out.print("Enter resistance R1 (Ohm): ");
+        double R1 = sc.nextDouble();
+
+        System.out.print("Enter resistance R2 (Ohm): ");
+        double R2 = sc.nextDouble();
+
+        // Check resistance
+        if (R1 <= 0 || R2 <= 0) {
+            System.out.println("Resistance must be greater than zero.");
+        } else {
+
+            // Voltage divider calculation
+            double Vout = Vin * R2 / (R1 + R2);
+
+            // Display results
+            System.out.println("\n---------- RESULTS ----------");
+            System.out.println("Input Voltage  = " + Vin + " V");
+            System.out.println("Resistance R1  = " + R1 + " Ohm");
+            System.out.println("Resistance R2  = " + R2 + " Ohm");
+            System.out.println("Output Voltage = " + Vout + " V");
+            System.out.println("-----------------------------");
+        }
+
+        sc.close();
+    }
+}
