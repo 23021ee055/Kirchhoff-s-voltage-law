@@ -1,0 +1,36 @@
+# Battery Charging and Discharging Calculator
+# EEE Mini Project
+
+print("======================================")
+print("   BATTERY CHARGING & DISCHARGING")
+print("======================================")
+
+capacity = float(input("Enter battery capacity (Ah): "))
+voltage = float(input("Enter battery voltage (V): "))
+charge_current = float(input("Enter charging current (A): "))
+load_current = float(input("Enter load current (A): "))
+
+# Charging time
+charging_time = capacity / charge_current
+
+# Discharging time
+discharging_time = capacity / load_current
+
+# Battery energy
+energy = capacity * voltage
+
+print("\n---------- RESULTS ----------")
+print("Battery Capacity :", capacity, "Ah")
+print("Battery Voltage  :", voltage, "V")
+print("Battery Energy   :", energy, "Wh")
+print("Charging Time    :", round(charging_time, 2), "hours")
+print("Discharging Time :", round(discharging_time, 2), "hours")
+
+if charge_current > load_current:
+    print("Battery Status   : Charging condition is suitable")
+elif charge_current == load_current:
+    print("Battery Status   : Balanced condition")
+else:
+    print("Battery Status   : Discharging condition")
+
+print("-----------------------------")
