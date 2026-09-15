@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class OhmsLaw {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("OHM'S LAW CALCULATOR");
+        System.out.println("1. Calculate Voltage");
+        System.out.println("2. Calculate Current");
+        System.out.println("3. Calculate Resistance");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+
+            case 1:
+                System.out.print("Enter current (A): ");
+                double current = sc.nextDouble();
+
+                System.out.print("Enter resistance (Ohm): ");
+                double resistance = sc.nextDouble();
+
+                double voltage = current * resistance;
+                System.out.println("Voltage = " + voltage + " V");
+                break;
+
+            case 2:
+                System.out.print("Enter voltage (V): ");
+                voltage = sc.nextDouble();
+
+                System.out.print("Enter resistance (Ohm): ");
+                resistance = sc.nextDouble();
+
+                if (resistance != 0) {
+                    current = voltage / resistance;
+                    System.out.println("Current = " + current + " A");
+                } else {
+                    System.out.println("Resistance cannot be zero.");
+                }
+                break;
+
+            case 3:
+                System.out.print("Enter voltage (V): ");
+                voltage = sc.nextDouble();
+
+                System.out.print("Enter current (A): ");
+                current = sc.nextDouble();
+
+                if (current != 0) {
+                    resistance = voltage / current;
+                    System.out.println("Resistance = " + resistance + " Ohm");
+                } else {
+                    System.out.println("Current cannot be zero.");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
