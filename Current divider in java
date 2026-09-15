@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class CurrentDivider {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("================================");
+        System.out.println("       CURRENT DIVIDER");
+        System.out.println("================================");
+
+        // Input total current
+        System.out.print("Enter total current (A): ");
+        double It = sc.nextDouble();
+
+        // Input resistor values
+        System.out.print("Enter resistance R1 (Ohm): ");
+        double R1 = sc.nextDouble();
+
+        System.out.print("Enter resistance R2 (Ohm): ");
+        double R2 = sc.nextDouble();
+
+        // Check for valid resistance
+        if (R1 <= 0 || R2 <= 0) {
+            System.out.println("Resistance must be greater than zero.");
+        } else {
+
+            // Current divider calculations
+            double I1 = It * R2 / (R1 + R2);
+            double I2 = It * R1 / (R1 + R2);
+
+            // Display results
+            System.out.println("\n---------- RESULTS ----------");
+            System.out.println("Total Current  = " + It + " A");
+            System.out.println("Resistance R1  = " + R1 + " Ohm");
+            System.out.println("Resistance R2  = " + R2 + " Ohm");
+
+            System.out.println("Current through R1 = " + I1 + " A");
+            System.out.println("Current through R2 = " + I2 + " A");
+
+            System.out.println("-----------------------------");
+            System.out.println("I1 + I2 = " + (I1 + I2) + " A");
+        }
+
+        sc.close();
+    }
+}
